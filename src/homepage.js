@@ -45,6 +45,11 @@ const HomePage = () => {
           >
             See How It Works →
           </Link>
+          <Link to="signup" className="border border-pink-300 text-pink-500 px-6 py-2 rounded-md text-lg"> signup
+          </Link>
+
+          <Link to="login" className="border border-pink-300 text-pink-500 px-6 py-2 rounded-md text-lg"> login
+          </Link>
         </div>
 
       </div>
