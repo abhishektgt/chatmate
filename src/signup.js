@@ -27,7 +27,7 @@ export default function Signup() {
     e.preventDefault();
     setMessage("");
     try {
-      const res = await axios.post(`${import.meta.env.VITE_API_URL}/api/auth/signup`, form);
+      const res = await axios.post("https://chatmate-backend-z54c.onrender.com/api/auth/signup", form);
       setMessage("✅ User signed up successfully!");
       setForm({
         name: "",

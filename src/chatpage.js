@@ -18,7 +18,7 @@ const Chat = () => {
     const fetchMessages = async () => {
       try {
         const token = localStorage.getItem("token");
-        const res = await axios.get(`${import.meta.env.VITE_API_URL}/api/messages`, {
+        const res = await axios.get("https://chatmate-backend-z54c.onrender.com/api/messages", {
           headers: {
             Authorization: `Bearer ${token}`,
           },
@@ -90,7 +90,7 @@ Companion:`.trim();
     try {
       const token = localStorage.getItem("token");
       const res = await axios.post(
-        `${import.meta.env.VITE_API_URL}/api/chat`,
+        "https://chatmate-backend-z54c.onrender.com/api/chat",
         { prompt, input },
         {
           headers: {
@@ -129,7 +129,7 @@ Companion:`.trim();
     if (window.confirm("Are you sure you want to clear all chat history? This action cannot be undone.")) {
       try {
         const token = localStorage.getItem("token");
-        await axios.delete(`${import.meta.env.VITE_API_URL}/api/messages`, {
+        await axios.delete("https://chatmate-backend-z54c.onrender.com/api/messages", {
           headers: {
             Authorization: `Bearer ${token}`,
           },
@@ -157,7 +157,7 @@ Companion:`.trim();
   const handleSaveChanges = async () => {
     try {
       const token = localStorage.getItem("token");
-      const res = await axios.put(`${import.meta.env.VITE_API_URL}/api/user`, user, {
+      const res = await axios.put("https://chatmate-backend-z54c.onrender.com/api/user", user, {
         headers: {
           Authorization: `Bearer ${token}`,
         },
