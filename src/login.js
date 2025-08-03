@@ -1,11 +1,14 @@
 // Login.jsx
 import React, { useState } from "react";
+import { useNavigate } from "react-router-dom";
+
 import axios from "axios";
 
 const Login = ({ onLogin }) => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [message, setMessage] = useState("");
+  const navigate = useNavigate(); // 
 
   const handleLogin = async (e) => {
     e.preventDefault();
@@ -20,9 +23,15 @@ const Login = ({ onLogin }) => {
       const { token, user } = response.data;
 
       localStorage.setItem("token", token);
+      localStorage.setItem("user", JSON.stringify(user));
+
       if (onLogin) onLogin(user);
 
+
+
       setMessage("✅ Login successful!");
+      navigate("/chat");
+
     } catch (err) {
       setMessage(err.response?.data?.message || "❌ Login failed");
     }

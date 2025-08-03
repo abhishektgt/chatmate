@@ -23,7 +23,7 @@ const steps = [
 
 const HowItWorks = () => {
   return (
-    <div className="min-h-screen flex flex-col items-center p-6 bg-gray-50">
+    <div className="min-h-screen flex flex-col items-center p-6 bg-gradient-to-b from-pink-50 to-white">
       <h1 className="text-3xl font-bold text-pink-600 mb-4">How Chatmate Works ⚙️</h1>
       <p className="text-gray-600 max-w-xl text-center mb-10">
         Chatmate combines short-term and long-term memory to hold truly personalized conversations. Here’s how you get started:

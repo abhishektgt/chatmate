@@ -33,22 +33,17 @@ const HomePage = () => {
           A personalized AI that remembers you, talks your way, and grows with you.
         </p>
         <div className="flex justify-center gap-4">
-          <Link
-            to="/getstarted"
-            className="bg-pink-500 hover:bg-pink-600 text-white px-6 py-2 rounded-md text-lg"
-          >
-            Get Started
-          </Link>
+          
           <Link
             to="/howitworks"
-            className="border border-pink-300 text-pink-500 px-6 py-2 rounded-md text-lg"
+            className="bg-pink-500 hover:bg-pink-600 text-white px-6 py-2 rounded-md text-lg"
           >
-            See How It Works →
+            See How It Works 
           </Link>
-          <Link to="signup" className="border border-pink-300 text-pink-500 px-6 py-2 rounded-md text-lg"> signup
+          <Link to="signup" className="bg-pink-500 hover:bg-pink-600 text-white px-6 py-2 rounded-md text-lg"> Signup
           </Link>
 
-          <Link to="login" className="border border-pink-300 text-pink-500 px-6 py-2 rounded-md text-lg"> login
+          <Link to="login" className="bg-pink-500 hover:bg-pink-600 text-white px-6 py-2 rounded-md text-lg"> Login
           </Link>
         </div>
 
