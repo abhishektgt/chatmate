@@ -15,7 +15,7 @@ const Login = ({ onLogin }) => {
     setMessage("");
 
     try {
-      const response = await axios.post(`${import.meta.env.VITE_API_URL}/api/auth/login`, {
+      const response = await axios.post("https://chatmate-backend-z54c.onrender.com/api/auth/login", {
         email,
         password,
       });
